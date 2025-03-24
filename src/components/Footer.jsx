@@ -19,10 +19,10 @@ const Footer = () => {
             <span className="logo-text">Naman4Singh</span>
             <p>Building Web3 Communities</p>
             <a 
-              href="mailto:namanrajpoot.0786@gmail.com" 
+              href="mailto:hire@naman4singh.com" 
               className="footer-email"
             >
-              namanrajpoot.0786@gmail.com
+              hire@naman4singh.com
             </a>
           </motion.div>
 
