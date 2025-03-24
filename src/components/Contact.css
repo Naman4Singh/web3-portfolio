@@ -1,0 +1,122 @@
+.contact {
+  padding: 8rem 0;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    var(--dark),
+    rgba(3, 0, 20, 0.95)
+  );
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact-text h2 {
+  font-size: 2.5rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.contact-text p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(3, 0, 20, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.social-card:hover::before {
+  transform: translateX(100%);
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--neon-blue);
+}
+
+.social-card i {
+  font-size: 1.5rem;
+  color: var(--neon-blue);
+  margin-right: 1rem;
+}
+
+.social-info {
+  flex: 1;
+}
+
+.platform {
+  display: block;
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.username {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.connect-arrow {
+  color: var(--neon-blue);
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .connect-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-text h2 {
+    font-size: 2rem;
+  }
+} 

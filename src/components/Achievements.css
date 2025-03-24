@@ -1,0 +1,187 @@
+.achievements {
+  padding: 8rem 0;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    var(--dark),
+    rgba(3, 0, 20, 0.9)
+  );
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.achievement-card {
+  background: rgba(3, 0, 20, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.achievement-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--neon-blue),
+    transparent
+  );
+}
+
+.achievement-header {
+  margin-bottom: 2rem;
+}
+
+.cyber-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.cyber-badge::before,
+.cyber-badge::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--neon-blue);
+}
+
+.cyber-badge::before {
+  top: -2px;
+  left: -2px;
+}
+
+.cyber-badge::after {
+  bottom: -2px;
+  right: -2px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--neon-blue);
+  margin-bottom: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievement-footer {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.achievement-footer p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cyber-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--neon-blue),
+    transparent
+  );
+}
+
+.achievements-summary {
+  background: rgba(3, 0, 20, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  padding: 3rem;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievements-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 255, 255, 0.1),
+    transparent 70%
+  );
+}
+
+.summary-content h3 {
+  color: var(--neon-blue);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.honors-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.honors-list li {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.honors-list li::before {
+  content: '⬢';
+  position: absolute;
+  left: 0;
+  color: var(--neon-blue);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .honors-list {
+    grid-template-columns: 1fr;
+  }
+} 
