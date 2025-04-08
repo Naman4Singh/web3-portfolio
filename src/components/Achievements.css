@@ -176,6 +176,46 @@
   color: var(--neon-blue);
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.achievements-train {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.train-container {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+.train-container::after {
+  content: '';
+  display: block;
+}
+
+.train-item {
+  flex: 0 0 auto;
+  background: rgba(3, 0, 20, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  color: var(--neon-blue);
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: 1fr;
@@ -184,4 +224,4 @@
   .honors-list {
     grid-template-columns: 1fr;
   }
-} 
+}

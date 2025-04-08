@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import './Achievements.css';
 
@@ -102,9 +103,61 @@ const Achievements = () => {
             </ul>
           </div>
         </motion.div>
+
+        {/* New train-like achievements section */}
+        <motion.div 
+          className="achievements-train"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="train-container">
+            {/* Duplicate train items for seamless scrolling */}
+            {[...Array(2)].map((_, idx) => (
+              <React.Fragment key={idx}>
+                <div className="train-item">
+                  <div className="stat-value">100K+</div>
+                  <div className="stat-label">Total Members</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">200%</div>
+                  <div className="stat-label">Growth Rate</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">65%</div>
+                  <div className="stat-label">Retention Rate</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">25+</div>
+                  <div className="stat-label">Strategic Partners</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">$1M+</div>
+                  <div className="stat-label">Value Generated</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">25+</div>
+                  <div className="stat-label">Joint Campaigns</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">70+</div>
+                  <div className="stat-label">Events Organized</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">4K+</div>
+                  <div className="stat-label">Active Participants</div>
+                </div>
+                <div className="train-item">
+                  <div className="stat-value">75%</div>
+                  <div className="stat-label">Satisfaction Rate</div>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default Achievements; 
+export default Achievements;

@@ -1,7 +1,22 @@
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
 const Contact = () => {
+  const [arrowPosition, setArrowPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setArrowPosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   const socialLinks = [
     {
       platform: "Discord",
@@ -78,8 +93,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <div className="cursor-arrow" style={{ left: arrowPosition.x, top: arrowPosition.y }} />
     </section>
   );
 };
 
-export default Contact; 
+export default Contact;

@@ -163,7 +163,7 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <a href="#contact" className="cyber-button">
-              <span className="cyber-button-text">Connect →</span>
+              <span className="cyber-button-text">Hire me →</span>
               <span className="cyber-button-glitch"></span>
             </a>
             <div className="social-links">
