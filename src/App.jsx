@@ -10,6 +10,7 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingAnimation from './components/LoadingAnimation';
+import MetaTags from './components/MetaTags';
 import './App.css';
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <Router>
+      <MetaTags />
       <div className="app">
         <AnimatePresence mode="wait">
           {isLoading && (
