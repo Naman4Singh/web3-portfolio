@@ -1,227 +1,201 @@
 .achievements {
-  padding: 8rem 0;
-  position: relative;
-  background: linear-gradient(
-    to bottom,
-    var(--dark),
-    rgba(3, 0, 20, 0.9)
-  );
+  padding: 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+}
+
+.achievements-header {
+  padding: 6rem 3rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.achievements-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.achievements-header p {
+  font-size: 1.125rem;
+  color: var(--text-2);
+  max-width: 600px;
 }
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
 
 .achievement-card {
-  background: rgba(3, 0, 20, 0.5);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
+  padding: 4rem 3rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease;
 }
 
-.achievement-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--neon-blue),
-    transparent
-  );
+.achievement-card:nth-child(3n) {
+  border-right: none;
+}
+
+.achievement-card:hover {
+  background: var(--bg-3);
 }
 
 .achievement-header {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-.cyber-badge {
+.category-badge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid var(--neon-blue);
-  color: var(--neon-blue);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-1);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-.cyber-badge::before,
-.cyber-badge::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: var(--neon-blue);
-}
-
-.cyber-badge::before {
-  top: -2px;
-  left: -2px;
-}
-
-.cyber-badge::after {
-  bottom: -2px;
-  right: -2px;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.5rem;
+  background: var(--surface);
+  border-radius: 4px;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .stat-item {
-  text-align: center;
+  text-align: left;
 }
 
 .stat-value {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--neon-blue);
-  margin-bottom: 0.5rem;
-  font-family: 'Space Grotesk', sans-serif;
+  color: var(--accent-1);
+  margin-bottom: 0.25rem;
+  display: block;
 }
 
 .stat-label {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: 0.75rem;
+  color: var(--text-3);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
 }
 
 .achievement-footer {
-  position: relative;
   padding-top: 2rem;
 }
 
 .achievement-footer p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.cyber-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--neon-blue),
-    transparent
-  );
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-2);
 }
 
 .achievements-summary {
-  background: rgba(3, 0, 20, 0.7);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  padding: 3rem;
-  margin-top: 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.achievements-summary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at top right,
-    rgba(0, 255, 255, 0.1),
-    transparent 70%
-  );
+  padding: 6rem 3rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-1);
 }
 
 .summary-content h3 {
-  color: var(--neon-blue);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 3rem;
 }
 
 .honors-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .honors-list li {
-  color: var(--text-secondary);
+  font-size: 1rem;
+  color: var(--text-2);
+  line-height: 1.7;
   padding-left: 1.5rem;
   position: relative;
 }
 
 .honors-list li::before {
-  content: '⬢';
+  content: '→';
   position: absolute;
   left: 0;
-  color: var(--neon-blue);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  color: var(--accent-1);
 }
 
 .achievements-train {
   display: flex;
   overflow: hidden;
-  position: relative;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-2);
 }
 
 .train-container {
   display: flex;
-  gap: 2rem;
-  animation: scroll 20s linear infinite;
+  gap: 3rem;
+  animation: scroll 25s linear infinite;
   width: max-content;
-}
-
-.train-container::after {
-  content: '';
-  display: block;
 }
 
 .train-item {
   flex: 0 0 auto;
-  background: rgba(3, 0, 20, 0.7);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  padding: 1rem 2rem;
-  color: var(--neon-blue);
-  font-size: 1.2rem;
-  text-align: center;
-  border-radius: 8px;
+  padding: 2rem 3rem;
+  border-right: 1px solid var(--border);
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .stats-grid {
+.train-item .stat-value {
+  font-size: 1.75rem;
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.train-item .stat-label {
+  font-size: 0.875rem;
+  display: inline;
+  text-transform: none;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 968px) {
+  .achievements-grid {
     grid-template-columns: 1fr;
   }
-  
-  .honors-list {
+
+  .achievement-card {
+    border-right: none;
+  }
+
+  .stats-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-header,
+  .achievements-summary {
+    padding: 4rem 1.5rem;
+  }
+
+  .achievement-card {
+    padding: 3rem 1.5rem;
   }
 }

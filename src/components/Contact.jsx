@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
 const Contact = () => {
-  const [arrowPosition, setArrowPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setArrowPosition({ x: event.clientX, y: event.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
   const socialLinks = [
     {
       platform: "Discord",
@@ -41,32 +27,33 @@ const Contact = () => {
       username: "Naman Rajpoot",
       icon: "fab fa-linkedin",
       link: "https://www.linkedin.com/in/naman-rajpoot/"
+    },
+    {
+      platform: "Resume",
+      username: "View Resume",
+      icon: "fas fa-file-pdf",
+      link: "https://drive.google.com/file/d/1PfX0NVdia6h7PxZg6wYT7ejlPsw1-Y14/view?usp=sharing"
+    },
+    {
+      platform: "Email",
+      username: "namanrajpoot.0786@gmail.com",
+      icon: "fas fa-envelope",
+      link: "mailto:namanrajpoot.0786@gmail.com"
     }
   ];
 
   return (
     <section id="contact" className="contact">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="section-header"
-        >
-          <div className="cyber-box">
-            <span className="glitch-text">CONNECT</span>
-          </div>
-        </motion.div>
-
-        <div className="contact-content">
+      <div className="contact-content">
           <motion.div
             className="contact-text"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h2>Let's Build Something Amazing Together</h2>
-            <p>Looking for a community manager or want to discuss partnerships? I'm always open to new opportunities and collaborations.</p>
+            <h3>Connect With Me</h3>
+            <p>Whether you're looking for a community manager, want to discuss partnerships, or just have a question, I'd love to hear from you.</p>
           </motion.div>
 
           <div className="social-grid">
@@ -91,9 +78,7 @@ const Contact = () => {
               </motion.a>
             ))}
           </div>
-        </div>
       </div>
-      <div className="cursor-arrow" style={{ left: arrowPosition.x, top: arrowPosition.y }} />
     </section>
   );
 };

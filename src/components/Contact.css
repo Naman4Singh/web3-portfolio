@@ -1,84 +1,100 @@
 .contact {
-  padding: 8rem 0;
-  position: relative;
-  background: linear-gradient(
-    to bottom,
-    var(--dark),
-    rgba(3, 0, 20, 0.95)
-  );
+  padding: 0;
+  background: var(--bg-1);
+  border-top: 1px solid var(--border);
+}
+
+.contact-header {
+  padding: 6rem 3rem 4rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-2);
+}
+
+.contact-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.contact-header p {
+  font-size: 1.125rem;
+  color: var(--text-2);
+  max-width: 600px;
 }
 
 .contact-content {
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 6rem 3rem;
 }
 
 .contact-text {
-  text-align: center;
   margin-bottom: 4rem;
 }
 
-.contact-text h2 {
-  font-size: 2.5rem;
-  color: var(--text);
-  margin-bottom: 1.5rem;
+.contact-text h3 {
   font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 1rem;
 }
 
 .contact-text p {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 600px;
 }
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+@media (max-width: 968px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
 }
 
 .social-card {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
-  background: rgba(3, 0, 20, 0.5);
-  border: 1px solid rgba(0, 255, 255, 0.1);
+  gap: 1.25rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.social-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+  transition: all 0.2s ease,
+              background 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(0, 255, 255, 0.1),
-    transparent
-  );
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
-}
-
-.social-card:hover::before {
-  transform: translateX(100%);
+  max-width: 300px;
 }
 
 .social-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--neon-blue);
+  background: var(--surface-hover);
+  border-color: var(--accent-1);
+  transform: translateX(4px);
 }
 
-.social-card i {
+.social-card i,
+.social-card svg {
   font-size: 1.5rem;
-  color: var(--neon-blue);
-  margin-right: 1rem;
+  color: var(--accent-1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-info {
@@ -87,36 +103,40 @@
 
 .platform {
   display: block;
-  color: var(--text);
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-1);
+  margin-bottom: 0.25rem;
+  transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .username {
   display: block;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
+  color: var(--text-3);
+  transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connect-arrow {
-  color: var(--neon-blue);
-  font-size: 1.2rem;
+  color: var(--accent-1);
+  font-size: 1.25rem;
   opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .social-card:hover .connect-arrow {
   opacity: 1;
-  transform: translateX(0);
 }
 
 @media (max-width: 768px) {
+  .contact-header,
+  .contact-content {
+    padding: 4rem 1.5rem;
+  }
+
   .social-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .contact-text h2 {
-    font-size: 2rem;
+    max-width: 100%;
   }
 }

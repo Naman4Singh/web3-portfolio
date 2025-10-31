@@ -54,19 +54,11 @@ const Experience = () => {
 
   return (
     <section id="experience" className="experience">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="section-header"
-        >
-          <div className="cyber-box">
-            <span className="glitch-text">EXPERIENCE</span>
-          </div>
-        </motion.div>
-
-        <div className="experience-grid">
+      <div className="experience-header">
+        <h2>Professional Experience</h2>
+        <p>Building communities and driving growth for leading Web3 projects</p>
+      </div>
+      <div className="experience-grid">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -91,23 +83,29 @@ const Experience = () => {
                   href={exp.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cyber-button-small"
+                  className="btn-link"
                 >
-                  View Details
-                  <span className="button-glitch"></span>
+                  Learn More
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </a>
               </div>
             </motion.div>
           ))}
+      </div>
+      <div className="experience-more">
+        <div className="more-divider"></div>
+        <div className="more-content">
+          <div className="more-icon">+</div>
+          <p className="more-text">Many more</p>
+          <div className="more-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="more-text"
-        >
-          <span className="glitch-text">MANY MORE</span>
-        </motion.div>
+        <div className="more-divider"></div>
       </div>
     </section>
   );

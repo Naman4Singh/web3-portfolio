@@ -35,17 +35,10 @@ const Achievements = () => {
 
   return (
     <section id="achievements" className="achievements">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="section-header"
-        >
-          <div className="cyber-box">
-            <span className="glitch-text">ACHIEVEMENTS</span>
-          </div>
-        </motion.div>
+      <div className="achievements-header">
+        <h2>Key Achievements</h2>
+        <p>Measurable results and recognition from industry leaders</p>
+      </div>
 
         <div className="achievements-grid">
           {achievements.map((achievement, index) => (
@@ -58,7 +51,7 @@ const Achievements = () => {
               transition={{ delay: index * 0.2 }}
             >
               <div className="achievement-header">
-                <div className="cyber-badge">{achievement.category}</div>
+                <div className="category-badge">{achievement.category}</div>
               </div>
               
               <div className="stats-grid">
@@ -80,13 +73,13 @@ const Achievements = () => {
 
               <div className="achievement-footer">
                 <p>{achievement.highlights}</p>
-                <div className="cyber-line"></div>
               </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div 
+          id="honours"
           className="achievements-summary"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -155,7 +148,6 @@ const Achievements = () => {
             ))}
           </div>
         </motion.div>
-      </div>
     </section>
   );
 };
