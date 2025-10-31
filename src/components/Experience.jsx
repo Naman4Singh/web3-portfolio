@@ -6,69 +6,50 @@ const Experience = () => {
     {
       title: "Head of Community",
       company: "SomniLife",
-      period: "Jan 2022 - May 2023",
+      period: "Nov 2020 - Jan 2022",
       highlights: [
-        "Grew community from 0K to 30K+ members on DC and TG",
-        "Implemented innovative engagement strategies",
-        "Added bots to fight with Spammers"
+        "Built community presence from scratch: 0→ 10K TG & 34K Discord",
+        "Organized weekly community events & AMAs",
+        "Managed campaigns across Website and Galxe for onboarding"
       ],
       link: "https://docs.somnilife.com"
     },
     {
       title: "Community Manager",
-      company: "KuCoin Exchange",
-      period: "Jan 2022 - Oct 2023",
+      company: "0xScope AI",
+      period: "Feb 2022 - Jun 2023",
       highlights: [
-        "Head of the official Discord server",
-        "Increased user interaction volume by 200%",
-        "Organized events and games for the community"
+        "Expanded TG from 8K → 32K within first year",
+        "Structured and led Zealy tasks & OG role campaigns to reward early adopters",
+        "Increased Discord engagement by 95% through quizzes and chat-mining"
       ],
-      link: "https://www.kucoin.com"
-    },
-    {
-      title: "Community Manager",
-      company: "KuCoin Wealth",
-      period: "Dec 2022 - Oct 2023",
-      highlights: [
-        "Managed 24/7 community support with help of bots and team mates",
-        "Created comprehensive docs and guides",
-        "Trained and led team of moderators"
-      ],
-      link: "https://kucoinwealth.medium.com"
+      link: "https://x.com/ScopeProtocol"
     },
     {
       title: "Community Moderator",
-      company: "Bitcoin Cats",
-      period: "Jan 2023 - Nov 2023",
-      highlights: [
-        "Developed ecosystem growth strategy",
-        "Helped members to get their NFTs",
-        "Successfully launched games and events"
-      ],
-      link: "https://www.bitcoincats.world"
-    },
-    {
-      title: "Community Manager",
-      company: "Halo SocialFi",
-      period: "Sep 2022 - Present",
-      highlights: [
-        "Working from start to end of the project",
-        "Facilitated 50+ successful proposals",
-        "Built trust with the community"
-      ],
-      link: "https://halo.social"
-    },
-    {
-      title: "Discord Manager",
       company: "FameEx Exchange",
-      period: "Nov 2023 - Present",
+      period: "Jun 2023 - Dec 2024",
       highlights: [
-        "Led global marketing campaigns",
-        "Achieved event success",
-        "Developed discord server"
+        "Expanded TG community from 25K → 44K members",
+        "Scaled Discord from 2K → 13K with regional sub-communities",
+        "Increased user activity by 70%+",
+        "Kept the groups active 24/7 via sharing crypto news and updates"
       ],
       link: "https://www.fameex.net"
-    }
+  },
+  {
+    title: "Community Manager",
+    company: "KuCoin Exchange",
+    period: "Jan 2025 - Present",
+    highlights: [
+      "Hosting events every week: Chat, Quiz, KuCoin Earn While you Learn etc",
+      "Grew 2nd group to 100K TG (max capped) and 114K Discord members",
+      "Increased engagement by 63% with quizzes and events regularly",
+      "Boosted engagement by 120%+ through campaigns",
+      "Built and managed a 24/7 global moderator team on Discord"
+    ],
+    link: "https://www.kucoin.com"
+  }
   ];
 
   return (
