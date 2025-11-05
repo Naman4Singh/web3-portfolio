@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Achievements from './components/Achievements';
+import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingAnimation from './components/LoadingAnimation';
@@ -89,6 +90,7 @@ function App() {
               <Hero />
               <Experience />
               <Achievements />
+              <Certificates />
               <Contact />
               <Footer />
             </main>

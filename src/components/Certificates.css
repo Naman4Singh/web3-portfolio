@@ -1,0 +1,225 @@
+.certificates {
+  padding: 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+}
+
+.certificates-header {
+  padding: 6rem 3rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.certificates-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.certificates-header p {
+  font-size: 1.125rem;
+  color: var(--text-2);
+  max-width: 600px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  padding: 4rem 3rem;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.certificate-frame {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.certificate-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--border-bright);
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.certificate-card:hover .certificate-frame {
+  border-color: var(--border-bright);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.15);
+  transform: translateY(-4px);
+}
+
+.certificate-card:hover .certificate-frame::before {
+  opacity: 1;
+}
+
+.certificate-image-container {
+  width: 100%;
+  background: var(--bg-1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.02);
+}
+
+.certificate-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.certificate-id {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certificate-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-1);
+  letter-spacing: 0.02em;
+  transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.id-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-3);
+  letter-spacing: 0.05em;
+  word-break: break-all;
+}
+
+.credential-link {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-2);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  background: var(--surface);
+}
+
+.credential-link:hover {
+  color: var(--accent-1);
+  border-color: var(--accent-1);
+  background: var(--surface-hover);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.credential-link svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+}
+
+.credential-link:hover svg {
+  transform: translateX(2px);
+}
+
+.certificate-title {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+
+.certificate-title h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-1);
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.certificate-card:hover .certificate-title h3 {
+  color: var(--accent-1);
+}
+
+/* Decorative corner elements */
+.certificate-frame::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--border-bright);
+  border-right: 2px solid var(--border-bright);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover .certificate-frame::after {
+  opacity: 0.5;
+}
+
+@media (max-width: 968px) {
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates-header {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .certificate-frame {
+    padding: 1.25rem;
+  }
+
+  .certificate-title {
+    padding: 0 1.25rem;
+  }
+}

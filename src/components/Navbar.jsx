@@ -67,6 +67,7 @@ const Navbar = () => {
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li><a href="#experience" className="nav-link" onClick={(e) => handleNavClick(e, '#experience')}>Experience</a></li>
           <li><a href="#achievements" className="nav-link" onClick={(e) => handleNavClick(e, '#achievements')}>Achievements</a></li>
+          <li><a href="#certificates" className="nav-link" onClick={(e) => handleNavClick(e, '#certificates')}>Certificates</a></li>
           <li><a href="#honours" className="nav-link" onClick={(e) => handleNavClick(e, '#honours')}>Honours</a></li>
           <li><a href="#contact" className="nav-link" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a></li>
         </ul>
