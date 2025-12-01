@@ -30,10 +30,10 @@ const Experience = () => {
       company: "FameEx Exchange",
       period: "Jun 2023 - Dec 2024",
       highlights: [
-        "Expanded TG community from 25K → 44K members",
-        "Scaled Discord from 2K → 13K with regional sub-communities",
-        "Increased user activity by 70%+",
-        "Kept the groups active 24/7 via sharing crypto news and updates"
+        "Responded to daily user queries related to trading, deposits, withdrawals, and account issues.",
+        "Provided clear guidance on platform features and helped new users get started smoothly.",
+        "Reported technical bugs and user feedback to the internal team for quick fixes.",
+        "Maintained a friendly and supportive environment to build trust with traders and new members."
       ],
       link: "https://www.fameex.net"
   },
@@ -42,11 +42,10 @@ const Experience = () => {
     company: "KuCoin Exchange",
     period: "Jan 2025 - Present",
     highlights: [
-      "Hosting events every week: Chat, Quiz, KuCoin Earn While you Learn etc",
-      "Grew 2nd group to 100K TG (max capped) and 114K Discord members",
-      "Increased engagement by 63% with quizzes and events regularly",
-      "Boosted engagement by 120%+ through campaigns",
-      "Built and managed a 24/7 global moderator team on Discord"
+      "Lead and train support moderators to handle user issues across Telegram and Discord.",
+      "Work closely with compliance and risk teams to report suspicious activities and prevent scams.",
+      "Monitor community sentiment and provide feedback to the product and marketing teams.",
+      "Coordinate multilingual support coverage to ensure users get help anytime.",
     ],
     link: "https://www.kucoin.com"
   }

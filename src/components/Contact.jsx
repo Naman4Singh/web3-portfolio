@@ -32,7 +32,7 @@ const Contact = () => {
       platform: "Resume",
       username: "View Resume",
       icon: "fas fa-file-pdf",
-      link: "https://drive.google.com/file/d/1PfX0NVdia6h7PxZg6wYT7ejlPsw1-Y14/view?usp=sharing"
+      link: "https://drive.google.com/file/d/1whsHO2fKIaVCR1WZaFb-AWYvJ0LaExgG/view?usp=sharing"
     },
     {
       platform: "Email",

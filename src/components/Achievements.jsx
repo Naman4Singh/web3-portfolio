@@ -89,7 +89,7 @@ const Achievements = () => {
             <h3>Recognition & Honors</h3>
             <ul className="honors-list">
               <li>Community Manager of the Month - KuCoin</li>
-              <li>Best Moderator - 0xScope</li>
+              <li>Top Representative - FameEX</li>
               <li>Best Discord Manager - FameEx </li>
               <li>Best Spam/Scam Fighter</li>
               <li>Hackathon Host - Diamante</li>

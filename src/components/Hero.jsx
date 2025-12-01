@@ -36,15 +36,13 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="hero-badge">Web3 Community Builder</div>
+          <div className="hero-badge">WEB3 COMMUNITY & CUSTOMER SUPPORT SPECIALIST</div>
           <h1 className="hero-title">
             Naman Rajpoot
             <span className="role">Crypto Community Architect</span>
           </h1>
           <p className="hero-description">
-            Building and scaling blockchain communities from ground zero. 
-            I transform Web3 projects into thriving ecosystems through strategic 
-            community management, crypto-native engagement, and growth hacking.
+          I work at the frontlines of Web3 communities, helping users every day through dedicated customer support while keeping engagement active across platforms. I build and scale blockchain communities from the ground up, support users with clear guidance, and create a safe and positive environment where members can grow with the project. My focus is on turning users into loyal supporters by combining strong community management with reliable, real-time support.
           </p>
           <div className="hero-actions">
             <a 
