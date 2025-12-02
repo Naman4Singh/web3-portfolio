@@ -26,7 +26,7 @@ const Experience = () => {
       link: "https://x.com/ScopeProtocol"
     },
     {
-      title: "Community Moderator",
+      title: "CS Representative",
       company: "FameEx Exchange",
       period: "Jun 2023 - Dec 2024",
       highlights: [
@@ -38,7 +38,7 @@ const Experience = () => {
       link: "https://www.fameex.net"
   },
   {
-    title: "Community Manager",
+    title: "Customer Support Manager",
     company: "KuCoin Exchange",
     period: "Jan 2025 - Present",
     highlights: [
